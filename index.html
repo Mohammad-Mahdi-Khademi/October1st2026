@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#17120f">
+  <meta name="description" content="A private little listening room for Nazanin.">
+  <title>The Listening Room — for Nazanin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="song" preload="auto">
+    <source src="Gus%20Black%20-%20Love%20is%20a%20Stranger.mp3" type="audio/mpeg">
+  </audio>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="room-light" aria-hidden="true"></div>
+  <div class="dust" id="dust" aria-hidden="true"></div>
+  <main class="room" id="room">
+    <header class="room-top"><span class="room-label"><i></i> PRIVATE LISTENING ROOM</span><span class="date-label">OCTOBER 01 <b>·</b> 2026</span></header>
+    <div class="scene-wrap">
+      <section class="scene scene-record is-active" data-scene="0" aria-labelledby="title-record" aria-hidden="false">
+        <div class="scene-meta"><span>FILE NO. 001</span><span>FOR NAZANIN</span></div>
+        <div class="scene-one-copy"><p class="overline">a song for the quiet in-between</p><h1 id="title-record">Some things<br>sound like <em>you.</em></h1><p class="intro-copy">I kept this song here for you.<br>Let the rest of the room disappear.</p></div>
+        <div class="turntable" id="turntable" aria-label="Record player">
+          <div class="record-sleeve"><div class="sleeve-stamp">SIDE<br><strong>A</strong></div><div class="sleeve-title">a little<br>piece of<br><i>my heart</i></div><div class="sleeve-mark">N <span>✳</span> M</div></div>
+          <button class="vinyl-button" id="playRecord" type="button" aria-label="Play Love is a Stranger"><span class="vinyl"><span class="grooves"></span><span class="label-disc"><small>GUS BLACK</small><b>LOVE IS<br>A STRANGER</b><i>33⅓</i></span><span class="spindle"></span></span></button>
+          <div class="tonearm" aria-hidden="true"><span></span></div><span class="turntable-caption">TAP THE RECORD TO LISTEN</span>
+        </div>
+        <div class="tiny-note note-top" aria-hidden="true">a small<br>dedication</div><div class="tiny-note note-bottom" aria-hidden="true">listen closely <span>↗</span></div>
+      </section>
+      <section class="scene scene-letter" data-scene="1" aria-labelledby="title-letter" aria-hidden="true" inert>
+        <div class="scene-meta"><span>FILE NO. 002</span><span>A NOTE, BETWEEN TRACKS</span></div>
+        <div class="letter-layout"><div class="letter-side-mark" aria-hidden="true">N<span>·</span>M</div><div class="letter-copy"><p class="overline">dear Nazanin,</p><h2 id="title-letter">I hope you know<br>how lovely it is<br>to be <em>your person.</em></h2><p class="letter-body">You make the little things feel like the whole story. The way you laugh, the way you care, the way your name can turn an ordinary day around — I keep all of it close.</p><p class="letter-sign">Always glad it’s you.<span>Mahdi</span></p></div><span class="letter-flower" aria-hidden="true">✳</span></div>
+        <div class="margin-quote" aria-hidden="true">the best part<br>is still ahead</div>
+      </section>
+      <section class="scene scene-afterglow" data-scene="2" aria-labelledby="title-afterglow" aria-hidden="true" inert>
+        <div class="scene-meta"><span>FILE NO. 003</span><span>KEEP THIS ONE</span></div>
+        <div class="afterglow-art" aria-hidden="true"><div class="halo"></div><span class="orbit orbit-a"></span><span class="orbit orbit-b"></span><span class="art-star star-a">✦</span><span class="art-star star-b">·</span><span class="art-star star-c">✧</span><span class="art-heart">♡</span></div>
+        <div class="afterglow-copy"><p class="overline">when the song is over</p><h2 id="title-afterglow">I’ll still be<br><em>right here.</em></h2><p class="final-line">Happy Girlfriend’s Day, Nazanin.</p><p class="final-sign">with all my love, Mahdi <span>♥</span></p></div>
+        <button class="replay-note" id="replayNote" type="button">↺ &nbsp; start this little night over</button>
+      </section>
+    </div>
+    <footer class="room-controls">
+      <button class="track-control" id="trackControl" type="button" aria-label="Play song"><span class="control-icon">▶</span><span class="track-label"><small id="trackStatus">READY WHEN YOU ARE</small><strong>Love is a Stranger <i>— Gus Black</i></strong></span></button>
+      <nav class="scene-nav" aria-label="Story scenes"><button type="button" class="nav-arrow" id="previous" aria-label="Previous scene" disabled>←</button><span class="scene-count"><b id="sceneNumber">01</b><i>/</i>03</span><button type="button" class="nav-arrow" id="next" aria-label="Next scene">→</button></nav>
+      <span class="room-endmark" aria-hidden="true">N<span>✳</span>M</span>
+    </footer>
+  </main>
+  <div class="entry" id="entry" role="dialog" aria-modal="true" aria-labelledby="entryTitle">
+    <div class="entry-stars" aria-hidden="true">✦　·　　 ✧　　 ·　✦</div><p class="entry-kicker">OCTOBER 01 <span>·</span> FOR YOU</p><h2 id="entryTitle">Nazanin, this<br>little room is <em>yours.</em></h2><p class="entry-copy">I saved you a song.<br>Come listen?</p><button class="enter-button" id="enterButton" type="button"><span>STEP INSIDE</span><i>↗</i></button><span class="entry-foot">SOUND ON · TAKE YOUR TIME</span>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
